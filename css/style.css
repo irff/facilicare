@@ -1,0 +1,300 @@
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/Myriad_Pro_Regular.otf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/Myriad_Pro_Bold.otf');
+	font-weight: 700;
+}
+
+
+html, body {
+	height: 100%;
+}
+
+/* -- Basic Styling -- */
+
+.white {
+	color: #fff;
+}
+
+.black {
+	color: #000;
+}
+
+.light-blue {
+	color: #5E86C9;
+}
+
+.centered {
+	text-align: center;
+}
+
+/* -- Typography --  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Myriad Pro', Verdana, Arial, sans-serif;
+	font-weight: 700;
+}
+
+/* -- Header -- */
+
+h1.title {
+	margin: 25px 0px 0px 0px;
+	padding: 0px;
+}
+
+/* -- Navigasi -- */
+
+nav {
+	margin: 0px;
+	padding: 0px;
+}
+
+.navigasi {
+	margin-top: 40px;
+	float: right;
+}
+
+.navigasi li {
+	list-style-type: none;
+	float: left;
+	margin: 0px 12px;
+}
+
+.navigasi li a {
+	padding-bottom: 5px;
+}
+
+.navigasi li a.active {
+	border-bottom: 2px solid #8FBDDB;
+}
+
+.navigasi li a:hover {
+	border-bottom: 2px solid #8FBDDB;
+}
+
+hr {
+	position: relative;
+}
+
+ul.navigasi-mobile {
+	width: 100%;
+	margin-top: 20px;
+	list-style-type: none;
+}
+
+.navigasi-mobile li {
+	display: inline;
+	margin: 0px 8px;
+}
+
+.navigasi-mobile a {
+	font-size: 18px;
+}
+
+.navigasi-mobile a.active {
+	border-bottom: 2px solid #8FBDDB;
+}
+
+.navigasi-mobile a:hover {
+	border-bottom: 2px solid #8FBDDB;
+}
+
+/* -- Main Menu -- */
+
+.main-menu {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+
+/* -- Upload Info Kerusakan -- */
+
+textarea {
+	resize: vertical;
+}
+
+
+/* -- Daftar Kerusakan -- */
+
+figure {
+	height: 200px;
+	margin: 0;
+	position: relative;
+}
+
+.daftar figure a {
+	height: 100%;
+}
+
+.daftar figure a div {
+	height: 100%;
+}
+
+figcaption {
+	margin: 0;
+}
+
+
+.daftar figure img {
+	margin: 0;
+	position: relative;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.daftar figcaption {
+	position: absolute;
+	padding: 5px;
+	top: 0;
+	left: 0;
+	background: rgba(83,117,198,1);
+}
+
+
+.daftar figcaption ul {
+	margin-top: 15px;
+	list-style-type: none;
+}
+
+.daftar figcaption li {
+	color: #fff;
+}
+
+.daftar figcaption i {
+	padding-right: 10px;
+}
+
+img.revealed {
+	width: 500px;
+	height: auto;
+	margin: 10px;
+}
+
+
+
+.daftar li {
+	-webkit-perspective: 1700px;
+	-moz-perspective: 1700px;
+	perspective: 1700px;
+	perspective: 1700px;
+	-webkit-perspective-origin: 0 50%;
+	-moz-perspective-origin: 0 50%;
+	perspective-origin: 0 50%;
+}
+
+.daftar figure {
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.daftar  figure div {
+	overflow: hidden;
+}
+
+.daftar figure img {
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.daftar figure:hover img,
+.daftar figure.cs-hover img {
+	-webkit-transform: translateX(25%);
+	-moz-transform: translateX(25%);
+	-o-transform: translateX(25%);
+	-ms-transform: translateX(25%);
+	transform: translateX(25%);
+		-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.daftar figcaption {
+	height: 100%;
+	width: 75%;
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transform: rotateY(-90deg);
+	-moz-transform: rotateY(-90deg);
+	transform: rotateY(-90deg);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+
+.no-touch .daftar figure:hover figcaption,
+.daftar figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+/* -- Footer -- */
+
+.footer {
+
+}
+
+@media only screen and (min-width: 481px) {
+	ul.navigasi-mobile {
+		display: none;
+	}
+}
+
+/* -- Media queries -- */
+@media only screen and (max-width: 767px) {
+	.title {
+		text-align: center;
+	}
+	nav {
+		max-width: 450px;
+		margin: 0px auto;
+		padding: 0px 50px;
+	}
+
+
+}
+
+@media only screen and (max-width: 480px) {
+	nav {
+		max-width: 450px;
+		margin: 0px auto;
+		padding: 0px 0px;
+		text-align: center;
+	}
+	
+	.title {
+		margin: 0px;
+	}
+
+	ul.navigasi {
+		display: none;
+	}
+
+}
